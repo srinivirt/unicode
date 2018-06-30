@@ -23,8 +23,9 @@ public class TamilUnicodeButtonFrame extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		// what does this do?
-		Character Ch = new Character('\u0b85');
-		char c = Ch.charValue();
+		// Character Ch = new Character('\u0b85'); // deprecated in Java 9
+		// char c = Ch.charValue(); // deprecated in Java 9
+        char c = Character.valueOf('\u0b85'); // single call in Java 9
 		System.out.print("Print char \u0b85 to console: ");
 		System.out.println(c);
 		
